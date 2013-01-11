@@ -32,7 +32,7 @@ module PLSQL
       else
         params[:database]
       end
-      new(OCI8.new(params[:username], params[:password], connection_string))
+      new(OCI8.new(params[:username], params[:password], connection_string, params[:privilege]))
     end
 
     def logoff
